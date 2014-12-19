@@ -1,7 +1,12 @@
+@import 'helpers';
+@import 'variables';
+@import 'lib/elements';
+
 // Main styles
 
 html {
   height: 100%;
+  font-family: @font-family-base;
 
   body {
     height: 100%;
@@ -10,8 +15,25 @@ html {
       min-height: 100%;
       overflow-x: hidden;
 
+      .header {
+        position: relative;
+
+        .ui.icon.menu {
+          background: transparent;
+          box-shadow: none;
+
+          .item {
+
+            .content.icon:before {
+              content: "\f0c9";
+            }
+          }
+        }
+      }
+
       .yield {
         position: relative;
+        padding: 0 0 3em;
       }
 
       .footer {
