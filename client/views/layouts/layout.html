@@ -1,5 +1,8 @@
 <template name="layout">
-  <div class="layout">
+  <div class="layout {{activeClass}}">
+    {{#if menuShow}}
+      {{> menu}}
+    {{/if}}
     <header class="header">
       {{> header}}
     </header>
