@@ -5,13 +5,8 @@ Template['header'].helpers({
 });
 
 Template['header'].events({
-  'click .ui.menu .item .icon' : function () {
-    var menuShow = Session.get('menuShow');
-
+  'click .ui.menu .item' : function () {
     Session.set('menuActive', !Session.get('menuActive'));
-
-    setTimeout(function () {
-      Session.set('menuShow', !Session.get('menuShow'));
-    }, 300);
+    Session.set('menuShow', !Session.get('menuShow'));
   }
 });
