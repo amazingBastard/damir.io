@@ -69,11 +69,16 @@ html {
           box-shadow: none;
 
           .item {
+            color: @light;
+
+            &:hover,
+            &:focus {
+              color: @gray-lighter;
+              background: transparent;
+            }
 
             .content.icon:before {
               content: "\f0c9";
-              -webkit-transition: -webkit-transform 0.3s;
-              transition: transform 0.3s;
             }
           }
         }
