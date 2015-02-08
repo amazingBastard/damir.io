@@ -5,7 +5,7 @@ Template['header'].helpers({
 });
 
 Template['header'].events({
-  'click .ui.menu .item' : function () {
+  'click .ui.menu .menu-toggle.item' : function () {
     Session.set('menuActive', !Session.get('menuActive'));
     Session.set('menuShow', !Session.get('menuShow'));
   }

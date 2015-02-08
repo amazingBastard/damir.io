@@ -10,14 +10,20 @@ html {
 
   body {
     height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
     .layout {
       min-height: 100%;
-      overflow-x: hidden;
+      overflow: hidden;
+      background: url(@background-img);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
 
       aside.menu {
         position: absolute;
-        font-weight: 700;
+        margin-top: 3em;
         opacity: 0;
         -webkit-transition: opacity 1s;
         transition: opacity 1s;
@@ -69,11 +75,12 @@ html {
           box-shadow: none;
 
           .item {
-            color: @light;
+            color: @font-color;
+            text-transform: uppercase;
 
             &:hover,
             &:focus {
-              color: @gray-lighter;
+              color: @gray-light;
               background: transparent;
             }
 
@@ -86,9 +93,10 @@ html {
 
       .yield {
         position: relative;
+        height: 100vh;
         padding: 0 0 3em;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        background: @background-color;
         -webkit-transition: -webkit-transform 0.3s;
         transition: transform 0.3s;
 
@@ -125,7 +133,35 @@ html {
           opacity: 1;
         }
 
+        .header {
+
+          .ui.icon.menu {
+
+            .item {
+              color: @light;
+
+              &:hover,
+              &:focus {
+                color: @gray-lighter;
+              }
+            }
+          }
+        }
+
         .yield {
+          background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…BoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+          background: -moz-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%);
+          background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.5)));
+          background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%);
+          background: -o-linear-gradient(-45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%);
+          background: -ms-linear-gradient(-45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%);
+          background: linear-gradient(135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#80ffffff',GradientType=1 );
+          -webkit-filter: blur(0.5em);
+          -moz-filter: blur(0.5em);
+          -o-filter: blur(0.5em);
+          -ms-filter: blur(0.5em);
+          filter: blur(0.5em);
           -webkit-transform: translate3d(35vh, 60px, 0);
           transform: translate3d(35vh, 60px, 0);
 
