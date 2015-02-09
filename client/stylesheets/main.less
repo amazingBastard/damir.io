@@ -30,16 +30,26 @@ html {
 
         .ui.profile {
           display: block;
-          width: 30vh;
-          padding: 1em;
+          position: absolute;
+          top: 8%;
+          left: 100%;
+          width: 55%;
+          padding: 0;
+          z-index: 1;
 
           img {
             float: left;
-            margin-right: 1em;
+            margin: 0;
           }
 
           .name-title {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            color: @light;
             font-size: @font-size-base;
+            text-align: center;
+            line-height: 1;
           }
         }
 
