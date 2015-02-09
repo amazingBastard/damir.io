@@ -23,33 +23,27 @@ html {
 
       aside.menu {
         position: absolute;
-        margin-top: 3em;
+        width: 35vh;
         opacity: 0;
         -webkit-transition: opacity 1s;
         transition: opacity 1s;
 
-        .menu-top {
+        .ui.profile {
+          display: block;
+          width: 30vh;
+          padding: 1em;
 
-          .profile {
-            display: inline-block;
-            padding: 8px 10px;
-            width: 35vh;
-
-            img {
-              float: left;
-              margin-right: 1em;
-            }
+          img {
+            float: left;
+            margin-right: 1em;
           }
 
-          .icon-list {
-            display: inline-block;
-            font-size: 1.25em;
-
-            a {
-              margin: 0 1em 0 0;
-              padding: 0;
-            }
+          .name-title {
+            font-size: @font-size-base;
           }
+        }
+
+        .ui.icon.menu {
         }
 
         .menu-side {
