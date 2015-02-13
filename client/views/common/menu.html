@@ -1,65 +1,46 @@
 <template name="menu">
   <aside class="animated {{animateClass}} menu">
     <div class="ui profile">
-      <img src="images/user/dv.jpg" class="ui medium circular image" alt="Damir Vazgird"/>
-      <h1 class="name-title">Damir Vazgird <small>Software Engineer</small></h1>
+      <nav class="ui fluid three item icon menu">
+        <a class="item" href="mailto:dvazgird@gmail.com">
+          <i class="mail icon"></i>
+        </a>
+        <a class="item">
+          <i class="github icon"></i>
+        </a>
+        <a class="item">
+          <i class="twitter icon"></i>
+        </a>
+      </nav>
+      <a href="#">
+        <img src="images/user/dv.jpg" class="ui medium circular image" alt="Damir Vazgird"/>
+        <h1 class="name-title">Damir Vazgird <small>Software Engineer</small></h1>
+      </a>
     </div>
-    <nav class="ui icon menu">
-      <a class="red item">
-        <i class="mail icon"></i>
-      </a>
-      <a class="teal item">
-        <i class="lab icon"></i>
-      </a>
-      <a class="green item">
-        <i class="star icon"></i>
-      </a>
-    </nav>
     <nav class="ui vertical menu">
+      <a href="#" class="header item">
+        All Posts
+      </a>
+      <a href="#" class="header item">
+        About
+      </a>
       <div class="header item">
-        <i class="user icon"></i>
-        Communities
-      </div>
-      <div class="item">
-        College
+        Recent Projects
         <div class="menu">
-          <a class="item">Baseball</a>
-          <a class="item">Basketball</a>
-          <a class="item">Golf</a>
+          <a href="#" class="item">
+            Project 1
+          </a>
+          <a href="#" class="item">
+            Project 2
+          </a>
+          <a href="#" class="item">
+            Project 3
+          </a>
+          <a href="#" class="item">
+            Project 4
+          </a>
         </div>
       </div>
-      <a class="item">
-        Dance
-      </a>
-      <a class="item">
-        Aerobics
-      </a>
-      <div class="header item">
-        <i class="globe icon"></i>
-        Cities
-      </div>
-      <a class="item">
-        New York
-      </a>
-      <a class="item">
-        Montreal
-      </a>
-      <a class="item">
-        Los Angeles
-      </a>
-      <a class="item">
-        San Francisco
-      </a>
-      <div class="header item">
-        <i class="icon calendar"></i>
-        Months
-      </div>
-      <a class="item">
-        August
-      </a>
-      <a class="item">
-        June
-      </a>
     </nav>
   </aside>
 </template>
