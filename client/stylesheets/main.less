@@ -33,11 +33,34 @@ html {
         .ui.profile {
           display: block;
           position: fixed;
-          top: 3em;
+          bottom: 0.5em;
           right: 0.25em;
           width: 40%;
           padding: 0;
           z-index: 1;
+
+          .ui.profile-action {
+
+            .ui.image {
+              width: 100%;
+              float: left;
+              margin: 0;
+            }
+
+            .name-title {
+              display: inline-block;
+              width: 100%;
+              margin: 0;
+              color: @light;
+              font-size: @font-size-base;
+              text-align: center;
+              line-height: 1;
+
+              small {
+                display: block;
+              }
+            }
+          }
 
           .ui.icon.menu {
             margin: 0;
@@ -50,26 +73,6 @@ html {
               &:before {
                 background: none;
               }
-            }
-          }
-
-          .ui.image {
-            width: 100%;
-            float: left;
-            margin: 0;
-          }
-
-          .name-title {
-            display: inline-block;
-            width: 100%;
-            margin: 0;
-            color: @light;
-            font-size: @font-size-base;
-            text-align: center;
-            line-height: 1;
-
-            small {
-              display: block;
             }
           }
         }
@@ -125,7 +128,6 @@ html {
       .yield {
         position: relative;
         height: 100vh;
-        padding: 0 0 3em;
         overflow: hidden;
         background: @background-color;
         -webkit-transition: -webkit-transform 0.3s;
@@ -133,6 +135,7 @@ html {
 
         .view {
           position: relative;
+          padding: 3em 0;
 
           &::before {
             position: absolute;
@@ -149,13 +152,13 @@ html {
             transition: opacity 0.3s, transform 0s 0.3s;
           }
         }
-      }
 
-      .footer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        .footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
       }
 
       &.menu-active {
