@@ -4,9 +4,27 @@
       <i class="{{iconToggle}} icon"></i>
     </a>
     <div class="right menu">
-      <a class="item" href="{{pathFor 'home'}}">
-        Damir.io
-      </a>
+      {{#if menuShow}}
+        {{#if currentUser}}
+          <a class="menu-toggle sign-out item" href="#">
+            <i class="sign out icon"></i>
+          </a>
+        {{else}}
+          <a class="menu-toggle item" href="{{pathFor 'dashboard'}}">
+            <i class="sign in icon"></i>
+          </a>
+        {{/if}}
+      {{else}}
+        {{#if currentUser}}
+          <a class="item" href="{{pathFor 'dashboard'}}">
+            Damir.io
+          </a>
+        {{else}}
+          <a class="item" href="{{pathFor 'home'}}">
+            Damir.io
+          </a>
+        {{/if}}
+      {{/if}}
     </div>
   </div>
 </template>

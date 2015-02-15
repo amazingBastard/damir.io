@@ -1,0 +1,13 @@
+<template name="dashboard">
+	<div class="dashboard view">
+		<div class="ui stackable page grid">
+			<div class="column">
+				{{#if currentUser}}
+				  <p>admin dashboard</p>
+			  {{else}}
+				  {{> atForm state='signIn'}}
+			  {{/if}}
+			</div>
+		</div>
+	</div>
+</template>
