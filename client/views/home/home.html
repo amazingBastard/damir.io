@@ -2,7 +2,9 @@
   <div class="home view">
     <div class="ui stackable page grid">
       <div class="posts column">
-        {{> post}}
+        {{#each posts}}
+          {{> post}}
+        {{/each}}
       </div>
     </div>
   </div>

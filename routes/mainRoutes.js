@@ -2,7 +2,7 @@ Router.route('/', {
   name: 'home',
   waitOn: function () {
     return [
-      Meteor.subscribe('Posts')
+      Meteor.subscribe('posts')
     ]
   },
   action: function () {
