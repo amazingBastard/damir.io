@@ -86,7 +86,6 @@ Other security enforcing packages like [audit-argument-checks](https://docs.mete
 * Accounts
   * accounts-password
   * useraccounts:semantic-ui
-  * alanning:roles
 * UI and UX
   * fastclick
   * meteorhacks:fast-render
