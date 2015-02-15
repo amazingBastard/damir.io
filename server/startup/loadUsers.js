@@ -13,11 +13,10 @@ Meteor.startup(function () {
     loadUser(users[key]);
   }
 });
-/*
+
 Accounts.onCreateUser(function (options, user) {
-  user.roles = ['mdblog-author'];
+  user.roles = ['admin'];
   if (options.profile)
     user.profile = options.profile;
   return user;
 });
-*/

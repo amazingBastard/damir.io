@@ -1,8 +1,4 @@
-user_admin:
-  email: admin@test.com
+admin:
+  email: dvazgird@gmail.com
   username: admin
   password: supersecret
-user_test:
-  email: test@test.com
-  username: test
-  password: testtest

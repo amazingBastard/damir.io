@@ -92,6 +92,7 @@ Other security enforcing packages like [audit-argument-checks](https://docs.mete
   * meteorhacks:fast-render
   * natestrauser:animate-css
   * nooitaf:semantic-ui-less
+  * markdown
 * Security
   * browser-policy
   * audit-argument-checks
