@@ -3,7 +3,7 @@
 		<div class="ui stackable page grid">
 			<div class="column">
 				{{#if currentUser}}
-				  <p>admin dashboard</p>
+				  {{> newPost}}
 			  {{else}}
 				  {{> atForm state='signIn'}}
 			  {{/if}}

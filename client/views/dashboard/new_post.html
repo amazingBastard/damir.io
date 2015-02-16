@@ -1,0 +1,26 @@
+<template name="newPost">
+  <div class="ui form segment markdown new-post">
+    <div class="field">
+      <input type="text" class="post-title" placeholder="Write your title here..." required>
+    </div>
+
+    <div class="two fields">
+      <section class="editor field">
+        <i class="maximize fullscreen icon"></i>
+        <textarea name="post" class="post" placeholder="Write your post with markdown" required></textarea>
+      </section>
+
+      <section class="preview field">
+        <i class="maximize fullscreen icon"></i>
+        <div class="parsed-post">
+          {{#markdown}}{{session 'post'}}{{/markdown}}
+        </div>
+      </section>
+    </div>
+
+    <div class="ui fluid primary add-new-post button">
+      <i class="plus icon"></i>
+      New Post
+    </div>
+  </div>
+</template>

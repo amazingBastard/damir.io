@@ -25,3 +25,15 @@ Template.registerHelper('debug', function (optionalValue) {
 Template.registerHelper('constant', function (what) {
   return Meteor.App[what.toUpperCase()];
 });
+
+Template.registerHelper('formatDate', function(newDate, updatedDate) {
+  if ( newDate > updatedDate) {
+    return moment(newDate).fromNow();
+  } else {
+    return moment(updatedDate).fromNow();
+  }
+});
+
+Template.registerHelper('session', function(input) {
+  return Session.get(input);
+});
