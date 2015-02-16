@@ -1,18 +1,18 @@
 <template name="newPost">
-  <div class="ui form segment markdown new-post">
+  <div class="ui form segment markdown-form new-post">
     <div class="field">
-      <input type="text" class="post-title" placeholder="Write your title here..." required>
+      <input type="text" class="post-title" placeholder="Name your post" required>
     </div>
+
+    <i class="maximize unhide toggle icon"></i>
 
     <div class="two fields">
       <section class="editor field">
-        <i class="maximize fullscreen icon"></i>
-        <textarea name="post" class="post" placeholder="Write your post with markdown" required></textarea>
+        <textarea name="write" class="write markdown" placeholder="Write your post with markdown" required></textarea>
       </section>
 
       <section class="preview field">
-        <i class="maximize fullscreen icon"></i>
-        <div class="parsed-post">
+        <div class="parse markdown">
           {{#markdown}}{{session 'post'}}{{/markdown}}
         </div>
       </section>
