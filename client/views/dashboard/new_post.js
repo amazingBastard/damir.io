@@ -11,6 +11,7 @@ Template.newPost.events({
 
 Template.newPost.events({
 	'click .add-new-post': function(e) {
+		console.log('test');
 		e.preventDefault();
 
 		var newPost = {
