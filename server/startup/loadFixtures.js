@@ -8,7 +8,9 @@ function loadFixture(fixtures, collection) {
 }
 
 Meteor.startup(function () {
+  /*
   if (Posts.find().count() === 0) {
     loadFixture(Fixtures['posts'], Posts);
   }
+  */
 });

@@ -1,3 +1,9 @@
+Template.newPost.rendered = function () {
+	var preview = $('.markdown-form .preview');
+
+	$(preview).addClas('hidden');
+};
+
 Template.newPost.events({
 	'keyup .markdown-form .editor .markdown': function(e) {
 		setTimeout(function() {
@@ -6,12 +12,17 @@ Template.newPost.events({
 			Session.set('post', '');
 			Session.set('post', post);
 		});
-	}
-});
+	},
+	'click .switch-editor': function(e) {
+		e.preventDefault();
 
-Template.newPost.events({
+    console.log('clicked preview');
+		// @TODO: rename button to toggle
+		// session 'toggle'
+		// preview/editor is switched in/out
+		// button title toggles preview/editor
+	},
 	'click .add-new-post': function(e) {
-		console.log('test');
 		e.preventDefault();
 
 		var newPost = {

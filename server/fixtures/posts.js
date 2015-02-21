@@ -1,6 +1,6 @@
 // The "||" notation doesn't work yet
 Fixtures = typeof Fixtures !== "undefined" ? Fixtures : {};
-
+/*
 Fixtures.posts = [
 	{
 	  'title' : 'post 1',
@@ -11,3 +11,4 @@ Fixtures.posts = [
 		'text' : 'some random text'
 	}
 ];
+*/
