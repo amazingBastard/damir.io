@@ -22,7 +22,7 @@ Template['newPost'].helpers({
 });
 
 Template['newPost'].events({
-	'keyup .markdown-form .editor .markdown': function(e) {
+	'keyup .editor .markdown': function(e) {
 		e.preventDefault();
 		var post = $(e.target).val();
 
@@ -43,8 +43,7 @@ Template['newPost'].events({
 		e.preventDefault();
 
 		var newPost = {
-			title: $(e.target).parent().parent().find('.markdown-form.new-post .post-title').val(),
-			post: $('.markdown-form.new-post .editor .write.markdown').val(),
+			post: $('.new-post .editor .write.markdown').val(),
 			date: Date.now(),
 			updated: Date.now(),
 			author: Meteor.userId(),

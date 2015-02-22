@@ -9,6 +9,7 @@
 
 		.column {
 
+			// login form
 			.ui.at-form {
 				margin: 15vh 0;
         background: @cloud-gray;
@@ -33,6 +34,51 @@
 					}
 				}
       }
+
+			// new post
+			.ui.form.new-post {
+				margin: 1em 0 0;
+				padding: 0;
+				background: transparent;
+				box-shadow: none;
+
+				.two.fields {
+
+					.editor,
+					.preview {
+						display: none;
+					}
+				}
+
+				// show editor
+				&.active-editor {
+
+					.two.fields {
+
+						.editor {
+							display: block;
+						}
+
+						.preview {
+							display: none;
+						}
+					}
+				}
+
+				// show preview
+				&.active-preview {
+					.two.fields {
+
+						.editor {
+							display: none;
+						}
+
+						.preview {
+							display: block;
+						}
+					}
+				}
+			}
     }
   }
 }
