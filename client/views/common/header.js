@@ -13,7 +13,6 @@ Template['header'].events({
     Session.set('menuShow', !Session.get('menuShow'));
   },
   'click .ui.menu .sign-out.item' : function () {
-    console.log('sign out');
     Meteor.logout();
   }
 });
