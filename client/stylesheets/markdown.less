@@ -7,44 +7,90 @@
 
 	.view {
 
-		// new post editor
-		.editor {
-			height: 70vh;
-			max-height: 100vh;
+		.ui.markdown.form {
+			margin: 0;
+			padding: 0;
+			background: transparent;
+			box-shadow: none;
 
-			.write.markdown {
-				min-height: 20em;
-				height: 70vh;
-				max-height: 100vh;
-				padding: 1em;
-				background: @font-color;
-				color: @europa-blue;
-				resize: none;
-				border: 0;
-				line-height: 1.25;
+			.two.fields {
+
+				.editor,
+				.preview {
+					display: none;
+				}
+
+				// post editor
+				.editor {
+					height: 70vh;
+					max-height: 100vh;
+
+					.write.markdown {
+						min-height: 20em;
+						height: 70vh;
+						max-height: 100vh;
+						padding: 1em;
+						background: @font-color;
+						color: @europa-blue;
+						resize: none;
+						border: 0;
+						line-height: 1.25;
+					}
+				}
+
+				// post preview
+				.preview {
+					height: 70vh;
+					max-height: 100vh;
+
+					.parse.markdown {
+						min-height: 20em;
+						height: 70vh;
+						max-height: 100vh;
+						overflow: auto;
+						background: transparent;
+						color: @font-color;
+						line-height: 1.25;
+						-webkit-appearance: none;
+						-webkit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						-ms-box-sizing: border-box;
+						box-sizing: border-box;
+					}
+				}
+			}
+
+			// show editor
+			&.active-editor {
+
+				.two.fields {
+
+					.editor {
+						display: block;
+					}
+
+					.preview {
+						display: none;
+					}
+				}
+			}
+
+			// show preview
+			&.active-preview {
+				.two.fields {
+
+					.editor {
+						display: none;
+					}
+
+					.preview {
+						display: block;
+					}
+				}
 			}
 		}
 
-		// new post preview
-		.preview {
-			height: 70vh;
-			max-height: 100vh;
-
-			.parse.markdown {
-				min-height: 20em;
-				height: 70vh;
-				max-height: 100vh;
-				overflow: auto;
-				background: transparent;
-				color: @font-color;
-				line-height: 1.25;
-				-webkit-appearance: none;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				-ms-box-sizing: border-box;
-				box-sizing: border-box;
-			}
-		}
+		// parse markdown
 
 		.parse.markdown {
 

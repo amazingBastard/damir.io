@@ -1,0 +1,39 @@
+@import 'helpers';
+@import 'variables';
+
+// login
+
+.view {
+
+	.ui.page.grid {
+
+		.column {
+
+			// login form
+			.ui.at-form {
+				margin: 15vh 0;
+        background: @cloud-gray;
+
+				.at-title {
+          color: @font-color;
+
+					.ui.header {
+            border: 0;
+          }
+        }
+
+				.at-pwd-form {
+
+					.ui.input {
+
+						input:focus {
+							border-color: @europa-blue;
+							-webkit-box-shadow: 0.3em 0em 0em 0em @europa-blue inset;
+              box-shadow: 0.3em 0em 0em 0em @europa-blue inset;
+						}
+					}
+				}
+      }
+    }
+  }
+}

@@ -31,13 +31,9 @@ Template['newPost'].events({
 	},
 	'click .toggle-editor': function(e) {
 		e.preventDefault();
-		var hideEditor = Session.get('showEditor');
 
     Session.set('activeClass', !Session.get('activeClass'));
-
-    setTimeout(function () {
-      Session.set('hideEditor', !Session.get('showEditor'));
-    }, 500);
+    Session.set('showEditor', !Session.get('showEditor'));
 	},
 	'click .add-new-post': function(e) {
 		e.preventDefault();
@@ -54,5 +50,6 @@ Template['newPost'].events({
 
 		Posts.insert(newPost);
 		Router.go('home');
+		FlashMessages.sendSuccess('New post was added successfully!');
 	}
 });
