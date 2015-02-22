@@ -1,26 +1,43 @@
 Template.newPost.rendered = function () {
-	var preview = $('.markdown-form .preview');
-
-	$(preview).addClas('hidden');
+	Session.set('activeClass', true);
+  Session.set('showEditor', true);
 };
 
-Template.newPost.events({
-	'keyup .markdown-form .editor .markdown': function(e) {
-		setTimeout(function() {
-			e.preventDefault();
-			var post = $(e.target).val();
-			Session.set('post', '');
-			Session.set('post', post);
-		});
+Template['newPost'].helpers({
+	showEditor: function () {
+		return Session.get('showEditor');
 	},
-	'click .switch-editor': function(e) {
-		e.preventDefault();
+	activeClass: function () {
+		return Session.get('activeClass') ? 'active-editor' : 'active-preview';
+  },
+	animateEditor: function () {
+    return Session.get('activeClass') ? 'fadeIn' : 'fadeOut';
+  },
+	animatePreview: function () {
+		return !Session.get('activeClass') ? 'fadeIn' : 'fadeOut';
+	},
+	toggleButton: function () {
+    return Session.get('activeClass') ? 'Preview' : 'Editor';
+  }
+});
 
-    console.log('clicked preview');
-		// @TODO: rename button to toggle
-		// session 'toggle'
-		// preview/editor is switched in/out
-		// button title toggles preview/editor
+Template['newPost'].events({
+	'keyup .markdown-form .editor .markdown': function(e) {
+		e.preventDefault();
+		var post = $(e.target).val();
+
+		Session.set('post', '');
+		Session.set('post', post);
+	},
+	'click .toggle-editor': function(e) {
+		e.preventDefault();
+		var hideEditor = Session.get('showEditor');
+
+    Session.set('activeClass', !Session.get('activeClass'));
+
+    setTimeout(function () {
+      Session.set('hideEditor', !Session.get('showEditor'));
+    }, 500);
 	},
 	'click .add-new-post': function(e) {
 		e.preventDefault();

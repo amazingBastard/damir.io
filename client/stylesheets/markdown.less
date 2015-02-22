@@ -1,0 +1,83 @@
+@import 'helpers';
+@import 'variables';
+
+// markdown editor/preview form
+
+
+.layout {
+
+	.view {
+
+		.ui.form.markdown-form {
+			margin: 1em 0 0;
+			padding: 0;
+			background: transparent;
+			box-shadow: none;
+
+			.field {
+
+				.post-title {
+					padding: 0.25em;
+					background: transparent;
+					border: 0;
+					border-radius: 0;
+					border-bottom: 1px solid @font-color;
+					font-size: @font-size-medium;
+					text-align: center;
+					-webkit-transition: all 300ms;
+					transition: all 300ms;
+
+					&:focus {
+						box-shadow: none;
+						border-bottom: 3px solid @europa-blue;
+					}
+				}
+			}
+
+			.two.fields {
+
+				.editor {
+					display: none;
+
+					.markdown {
+						height: 50vh;
+						padding: 1em;
+						background: @font-color;
+						color: @io-white;
+					}
+				}
+
+				.preview {
+					display: none;
+				}
+			}
+
+			&.active-editor {
+
+				.two.fields {
+
+					.editor {
+						display: block;
+					}
+
+					.preview {
+						display: none;
+					}
+				}
+			}
+
+			&.active-preview {
+				.two.fields {
+
+					.editor {
+						display: none;
+					}
+
+					.preview {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
