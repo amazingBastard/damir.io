@@ -1,5 +1,5 @@
 Template.home.helpers({
 	'posts': function() {
-		return Posts.find({}, {sort: {date: -1}});
+		return Posts.find({}, {sort: {updated: -1}});
 	}
 });
