@@ -6,5 +6,5 @@ if (Meteor.App) {
 
 Meteor.App = {
   NAME: 'Damir.io | Modern Javascript Powered Software',
-  DESCRIPTION: 'A modern blog for the modern age. Learn all about the Javascript development process by reading this blog.'
+  DESCRIPTION: 'A modern blog for the modern age. Learn all about the Javascript powered development process and latest web design trends.'
 };
