@@ -1,5 +1,6 @@
 Template.home.helpers({
 	'posts': function() {
-		return Posts.find();
+		var user = Meteor.userId();
+    return Posts.find({author: user}, {sort: {updated: -1}});
 	}
 });
