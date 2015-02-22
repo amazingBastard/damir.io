@@ -1,0 +1,10 @@
+<template name="post">
+  <article class="animated fadeIn post">
+    <div class="ui date label">
+      <i class="calendar icon"></i> {{formatDate date updated}}
+    </div>
+    <div class="parse markdown">
+      {{#markdown}}{{post}}{{/markdown}}
+    </div>
+  </article>
+</template>

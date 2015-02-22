@@ -1,9 +1,11 @@
 <template name="home">
   <div class="animated fadeIn home view">
     <div class="ui stackable page grid">
-      <div class="posts column">
+      <div class="column">
         {{#each posts}}
-          {{> post}}
+          <a href="{{pathFor 'showPost'}}">
+            {{> post}}
+          </a>
         {{/each}}
       </div>
     </div>

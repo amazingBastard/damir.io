@@ -17,7 +17,7 @@ Template['newPost'].helpers({
 		return !Session.get('activeClass') ? 'fadeIn' : 'fadeOut';
 	},
 	toggleButton: function () {
-    return Session.get('activeClass') ? 'Preview' : 'Editor';
+    return Session.get('activeClass') ? 'Preview' : 'Edit';
   }
 });
 

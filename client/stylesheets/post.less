@@ -1,0 +1,81 @@
+@import 'helpers';
+@import 'variables';
+
+// post view
+
+.view {
+
+  .ui.page.grid {
+
+    .column {
+
+      .post {
+        position: relative;
+        margin: 0 0 4em;
+
+        .ui.date.label {
+          position: absolute;
+          top: -2.5em;
+          right: 0;
+          margin: 0;
+          background: @cloud-gray;
+          color: fade(@font-color, 50%);
+          font-size: @font-size-small;
+          font-weight: bold;
+        }
+
+        .parse.markdown {
+          color: @font-color;
+        }
+
+        &:hover,
+        &:focus {
+
+          .ui.date.label {
+            background: @venus-orange;
+            color: @io-white;
+            -webkit-transition: all 0.5s;
+        		transition: all 0.5s;
+          }
+
+          .parse.markdown {
+
+            h1 {
+              border-color: @venus-orange;
+              -webkit-transition: all 0.5s;
+          		transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.show-post {
+
+    .ui.page.grid {
+
+      .column {
+
+        .post {
+
+          &:hover,
+          &:focus {
+
+            .ui.date.label {
+              background: @cloud-gray;
+              color: fade(@font-color, 50%);
+            }
+
+            .parse.markdown {
+
+              h1 {
+                border-color: @cloud-gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
