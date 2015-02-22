@@ -1,7 +1,7 @@
 <template name="menu">
   <aside class="animated {{animateClass}} menu">
     <div class="ui profile">
-      <a href="#" class="ui profile-action">
+      <a href="{{pathFor 'about'}}" class="ui profile-action">
         <img src="images/user/dv.jpg" class="ui medium circular image" alt="Damir Vazgird"/>
         <h1 class="name-title">Damir Vazgird <small>Software Engineer</small></h1>
       </a>
@@ -9,10 +9,10 @@
         <a class="item" href="mailto:dvazgird@gmail.com">
           <i class="mail icon"></i>
         </a>
-        <a class="item">
+        <a class="item" href="http://github.com/amazingBastard" target="_blank">
           <i class="github icon"></i>
         </a>
-        <a class="item">
+        <a class="item" href="http://twitter.com/dvazgird" target="_blank">
           <i class="twitter icon"></i>
         </a>
       </nav>
@@ -20,9 +20,6 @@
     <nav class="ui vertical menu">
       <a href="{{pathFor 'home'}}" class="header item">
         All Posts
-      </a>
-      <a href="#" class="header item">
-        About
       </a>
       <div class="header item">
         Recent Projects

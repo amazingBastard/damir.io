@@ -5,6 +5,13 @@ Router.route('/dashboard', {
   SEO.set({ title: Meteor.App.NAME });
 });
 
+Router.route('/about', {
+  name: 'about'
+}, function () {
+  this.render('about');
+  SEO.set({ title: Meteor.App.NAME });
+});
+
 Router.route('/:_id', {
   name: 'showPost',
   data: function() {
