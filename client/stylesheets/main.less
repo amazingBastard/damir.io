@@ -59,8 +59,10 @@ html {
         position: relative;
 
         .ui.icon.menu {
-          background: transparent;
+          background: @cloud-gray;
           box-shadow: none;
+          -webkit-transition: all 0.25s;
+          transition: all 0.25s;
 
           .item {
             color: @font-color;
@@ -89,7 +91,7 @@ html {
 
         .view {
           position: relative;
-          padding: 3em 0;
+          padding: 4em 0 2em;
 
           &::before {
             position: absolute;
@@ -116,7 +118,18 @@ html {
           .column {
             p {
               font-size: @font-size-small;
-            }  
+            }
+          }
+        }
+      }
+
+      &.menu-active {
+
+        .header {
+          position: relative;
+
+          .ui.icon.menu {
+            background: transparent;
           }
         }
       }
