@@ -84,13 +84,26 @@
       .column {
 
         .post {
+          position: relative;
+          margin: 0 0 6em;
+
+          .ui.date.label {
+            position: absolute;
+            top: -2.5em;
+            right: 0;
+            margin: 0;
+            background: @cloud-gray;
+            color: fade(@font-color, 50%);
+            font-size: @font-size-small;
+            font-weight: bold;
+          }
 
           &:hover,
           &:focus {
 
             .ui.date.label {
               background: @cloud-gray;
-              color: @comet-gray;
+              color: fade(@font-color, 50%);
             }
 
             .parse.markdown {
