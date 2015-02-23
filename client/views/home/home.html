@@ -3,7 +3,8 @@
     <div class="ui stackable page grid">
       <div class="column">
         {{#each posts}}
-          <a href="{{pathFor 'showPost'}}">
+          <a class="show-post-link" href="{{pathFor 'showPost'}}">
+            <div class="post-overlay"></div>
             {{> post}}
           </a>
         {{/each}}
