@@ -127,8 +127,10 @@
 		}
 
 		.header {
+			position: relative;
 
 			.ui.icon.menu {
+				background: transparent;
 
 				.item {
 					color: @light;
@@ -157,12 +159,33 @@
 			-webkit-transform: translate3d(15rem, 3em, 0);
 			transform: translate3d(15rem, 3em, 0);
 
-			.view::before {
-				opacity: 1;
-				-webkit-transition: opacity 0.3s;
-				transition: opacity 0.3s;
-				-webkit-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
+			.view {
+
+				.ui.page.grid {
+
+					.show-post-link {
+
+						.post-overlay {
+							background: transparent;
+						}
+
+						.post {
+							-webkit-filter: blur(0.5em);
+							-moz-filter: blur(0.5em);
+							-o-filter: blur(0.5em);
+							-ms-filter: blur(0.5em);
+							filter: blur(0.5em);
+						}
+					}
+				}
+
+				&::before {
+					opacity: 1;
+					-webkit-transition: opacity 0.3s;
+					transition: opacity 0.3s;
+					-webkit-transform: translate3d(0,0,0);
+					transform: translate3d(0,0,0);
+				}
 			}
 		}
 	}
