@@ -46,11 +46,11 @@ Template['showPost'].events({
 
       Posts.remove(id._id, function(err) {
 			  if (err) {
-					FlashMessages.sendError('An error occurred, please try agan.');
+					FlashMessages.sendError('Error, error!');
           console.log(err.reason);
         } else {
           Router.go('home');
-					FlashMessages.sendSuccess('Post was deleted successfully!');
+					FlashMessages.sendSuccess('Post deleted');
         }
       })
     }
@@ -66,11 +66,11 @@ Template['showPost'].events({
 
     Posts.update(thisPostId, {$set: postEntry}, function(err) {
       if (err) {
-				FlashMessages.sendError('An error occurred, please try agan.');
+				FlashMessages.sendError('Error, error!');
         console.log(err.reason);
       } else {
         Router.go('home');
-				FlashMessages.sendSuccess('Post was updated successfully!');
+				FlashMessages.sendSuccess('Post updated');
       }
     });
 	}

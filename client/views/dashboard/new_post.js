@@ -50,6 +50,6 @@ Template['newPost'].events({
 
 		Posts.insert(newPost);
 		Router.go('home');
-		FlashMessages.sendSuccess('New post was added successfully!');
+		FlashMessages.sendSuccess('Post added');
 	}
 });
