@@ -5,6 +5,24 @@ Router.route('/dashboard', {
   SEO.set({ title: Meteor.App.NAME });
 });
 
+Router.route('/dashboard/:_id', {
+  name: 'editPost',
+  data: function() {
+    return Posts.findOne(this.params._id);
+  },
+  waitOn: function () {
+    return Meteor.subscribe('posts');
+  },
+  action: function () {
+    if (this.ready())
+      this.render('editPost')
+    else
+      this.render('loading');
+  }
+}, function () {
+  SEO.set({ title: Meteor.App.NAME });
+});
+
 Router.route('/about', {
   name: 'about'
 }, function () {

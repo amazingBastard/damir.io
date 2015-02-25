@@ -2,37 +2,7 @@
 	<div class="animated fadeIn show-post view">
 		<div class="ui stackable page grid">
 			<div class="column">
-				{{#if currentUser}}
-					<div class="ui markdown form segment {{activeClass}}">
-				    <div class="two fields">
-				      <section class="animated {{animateEditor}} editor field">
-				        <textarea name="write" class="write markdown" required>{{post}}</textarea>
-				      </section>
-
-				      <section class="animated {{animatePreview}} preview field">
-				        <div class="parse markdown">
-				          {{#markdown}}{{session 'post'}}{{/markdown}}
-				        </div>
-				      </section>
-				    </div>
-						<div class="ui two fluid buttons">
-							<div class="ui toggle-editor secondary button">
-								{{toggleButton}}
-							</div>
-							{{#if showEditor}}
-							  <div class="ui update-post positive button">
-								  Update
-							  </div>
-							{{else}}
-							  <div class="ui delete-post negative button">
-								  Delete
-							  </div>
-					    {{/if}}
-						</div>
-				  </div>
-				{{else}}
-				  {{> post}}
-				{{/if}}
+				{{> post}}
 			</div>
 		</div>
 	</div>

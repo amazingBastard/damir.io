@@ -1,14 +1,23 @@
 <template name="footer">
   <div class="ui stackable footer page grid">
     <div class="column">
-        <div class="ui two fluid buttons {{toggleHidden}}">
+      <div class="ui two fluid buttons {{toggleHidden}}">
+        {{#if currentUser}}
+          <a class="ui secondary button" href="{{pathFor 'editPost'}}">
+            Edit
+          </a>
+          <a class="ui delete-post negative button">
+            Delete
+          </a>
+        {{else}}
           <a class="ui secondary button" href="{{pathFor 'home'}}">
             Back
           </a>
           <a class="ui primary button">
             Next
           </a>
-        </div>
+        {{/if}}
+      </div>
       <p class="aligned center">&copy; 2015, <a href="http://damirvazgird.com" target="_blank">Damir Vazgird</a></p>
     </div>
   </div>
