@@ -45,3 +45,19 @@ Template.registerHelper('showActions', function() {
 Template.registerHelper('toggleHidden', function() {
   return Session.get('toggleHidden') ? 'hidden' : '';
 });
+
+Template.registerHelper('showEditor', function() {
+  return Session.get('showEditor');
+});
+
+Template.registerHelper('toggleEditor', function() {
+  return Session.get('toggleEditor') ? 'active-editor' : 'active-preview';
+});
+
+Template.registerHelper('animateFade', function() {
+  return Session.get('toggleEditor') ? 'fadeIn' : 'fadeOut';
+});
+
+Template.registerHelper('toggleButton', function() {
+  return Session.get('toggleEditor') ? 'Preview' : 'Edit';
+});

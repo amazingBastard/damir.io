@@ -3,13 +3,13 @@
 		<div class="ui stackable page grid">
 			<div class="column">
 				{{#if currentUser}}
-					<div class="ui markdown form segment {{activeClass}}">
+					<div class="ui markdown form segment {{toggleEditor}}">
 						<div class="two fields">
-							<section class="animated {{animateEditor}} editor field">
+							<section class="animated {{animateFade}} editor field">
 								<textarea name="write" class="write markdown" required>{{post}}</textarea>
 							</section>
 
-							<section class="animated {{animatePreview}} preview field">
+							<section class="animated preview field">
 								<div class="parse markdown">
 									{{#markdown}}{{session 'post'}}{{/markdown}}
 								</div>

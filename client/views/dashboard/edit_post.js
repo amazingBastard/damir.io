@@ -1,29 +1,11 @@
 Template.editPost.rendered = function () {
-	Session.set('activeClass', false);
+	Session.set('toggleEditor', false);
   Session.set('showEditor', false);
 	Session.set('toggleHidden', true);
 
   var post = $('.editor .markdown').val();
   Session.set('post', post);
 };
-
-Template['editPost'].helpers({
-	showEditor: function () {
-		return Session.get('showEditor');
-	},
-	activeClass: function () {
-		return Session.get('activeClass') ? 'active-editor' : 'active-preview';
-  },
-	animateEditor: function () {
-    return Session.get('activeClass') ? 'fadeIn' : 'fadeOut';
-  },
-	animatePreview: function () {
-		return !Session.get('activeClass') ? 'fadeIn' : 'fadeOut';
-	},
-	toggleButton: function () {
-    return Session.get('activeClass') ? 'Preview' : 'Edit';
-  }
-});
 
 Template['editPost'].events({
 	'keyup .editor .markdown': function(e) {
@@ -36,7 +18,7 @@ Template['editPost'].events({
 	'click .toggle-editor': function(e) {
 		e.preventDefault();
 
-    Session.set('activeClass', !Session.get('activeClass'));
+    Session.set('toggleEditor', !Session.get('toggleEditor'));
     Session.set('showEditor', !Session.get('showEditor'));
 	},
 	'click .update-post': function(e) {
