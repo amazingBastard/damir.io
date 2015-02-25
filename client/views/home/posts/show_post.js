@@ -1,6 +1,7 @@
 Template.showPost.rendered = function () {
 	Session.set('activeClass', false);
   Session.set('showEditor', false);
+	Session.set('toggleHidden', false);
 
   var post = $('.editor .markdown').val();
   Session.set('post', post);

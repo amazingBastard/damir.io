@@ -37,3 +37,11 @@ Template.registerHelper('formatDate', function(newDate, updatedDate) {
 Template.registerHelper('session', function(input) {
   return Session.get(input);
 });
+
+Template.registerHelper('showActions', function() {
+  return Session.get('showActions');
+});
+
+Template.registerHelper('toggleHidden', function() {
+  return Session.get('toggleHidden') ? 'hidden' : '';
+});

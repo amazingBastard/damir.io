@@ -28,6 +28,7 @@ html {
     // buttons
 
     .ui.primary.button {
+      color: @io-white;
       background: @venus-orange;
 
       &:hover,
@@ -37,6 +38,7 @@ html {
     }
 
     .ui.secondary.button {
+      color: @io-white;
       background: @europa-blue;
 
       &:hover,
@@ -131,7 +133,7 @@ html {
       .yield {
         position: relative;
         overflow: hidden;
-        margin: 0 0 100vh;
+        margin: 0 0 25vh;
         z-index: 2;
         background: @background-color;
         -webkit-transition: -webkit-transform 0.3s;
@@ -180,6 +182,12 @@ html {
             position: relative;
             min-height: 100%;
 
+            .ui.fluid.buttons {
+              position: relative;
+              top: 80vh;
+              left: 0;
+            }
+
             p {
               position: absolute;
               width: 100%;
@@ -187,14 +195,14 @@ html {
               color: @io-white;
               font-size: @font-size-small;
               text-shadow: 1px 1px 1px @dark;
-            }
 
-            a {
-              color: @europa-blue;
+              a {
+                color: @europa-blue;
 
-              &:hover,
-              &:focus {
-                color: @io-white;
+                &:hover,
+                &:focus {
+                  color: @io-white;
+                }
               }
             }
           }
