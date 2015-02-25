@@ -1,8 +1,7 @@
 Template.editPost.rendered = function () {
+	Session.set('toggleAdmin', true);
 	Session.set('toggleEditor', false);
   Session.set('showEditor', false);
-	Session.set('toggleHidden', true);
-	Session.set('toggleAdmin', true);
 
   var post = $('.editor .markdown').val();
   Session.set('post', post);

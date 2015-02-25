@@ -1,6 +1,6 @@
 Template.home.rendered = function() {
-	Session.set('toggleHidden', true);
 	Session.set('toggleAdmin', false);
+	Session.set('showActions', false);
 };
 
 Template['home'].helpers({

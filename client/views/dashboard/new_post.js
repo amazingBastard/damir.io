@@ -1,8 +1,7 @@
 Template.newPost.rendered = function () {
+	Session.set('toggleAdmin', true);
 	Session.set('toggleEditor', true);
   Session.set('showEditor', true);
-	Session.set('toggleHidden', true);
-	Session.set('toggleAdmin', true);
 };
 
 Template['newPost'].events({
