@@ -46,6 +46,10 @@ Template.registerHelper('toggleHidden', function() {
   return Session.get('toggleHidden') ? 'hidden' : '';
 });
 
+Template.registerHelper('toggleAdmin', function() {
+  return Session.get('toggleAdmin') ? 'admin' : '';
+});
+
 Template.registerHelper('showEditor', function() {
   return Session.get('showEditor');
 });
