@@ -1,17 +1,19 @@
 <template name="layout">
-  <div class="layout {{activeClass}}">
+  <div class="layout {{toggleCover}} {{activeClass}}">
     {{#if menuShow}}
       {{> menu}}
     {{/if}}
     <header class="header">
       {{> header}}
     </header>
-    <main class="yield {{toggleAdmin}}">
+    <main class="yield">
       {{> flashMessages}}
       {{> yield}}
     </main>
-    <footer class="footer">
-      {{> footer}}
-    </footer>
+    {{#if showFooter}}
+      <footer class="footer">
+        {{> footer}}
+      </footer>
+    {{/if}}
   </div>
 </template>

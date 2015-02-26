@@ -1,5 +1,6 @@
 Template.newPost.rendered = function () {
-	Session.set('toggleAdmin', true);
+	Session.set('toggleCover', true);
+	Session.set('showFooter', false);
 	Session.set('toggleEditor', true);
   Session.set('showEditor', true);
 };

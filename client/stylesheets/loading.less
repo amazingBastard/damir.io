@@ -3,51 +3,43 @@
 
 // loading
 
-.ui.loading.dimmer {
-	padding: 40vh 0;
-	background: url(@background-img);
-	background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+.loading.boxes {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	margin-top: -50px;
+	margin-left: -50px;
+	animation: rotate 4s steps(4) infinite;
+	-webkit-animation: rotate 4s steps(4) infinite;
 
-	.boxes {
+	.box {
 		position: absolute;
-	  top: 50%;
-	  left: 50%;
-	  width: 100px;
-	  height: 100px;
-	  margin-top: -50px;
-	  margin-left: -50px;
-		animation: rotate 4s steps(4) infinite;
-    -webkit-animation: rotate 4s steps(4) infinite;
+		background-color: fade(@cloud-gray, 75%);
 
-		.box {
-		  position: absolute;
-		  background-color: fade(@cloud-gray, 75%);
+		&.odd {
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+		}
 
-			&.odd {
-			  top: 0;
-			  left: 0;
-			  width: 50%;
-			  height: 100%;
-			}
+		&.even {
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height: 50%;
 
-			&.even {
-			  top: 0;
-			  left: 50%;
-			  width: 50%;
-			  height: 50%;
+			animation-name: drop;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier;
+			animation-iteration-count: infinite;
 
-			  animation-name: drop;
-			  animation-duration: 1s;
-			  animation-timing-function: cubic-bezier;
-			  animation-iteration-count: infinite;
-
-			  -webkit-animation-name: drop;
-			  -webkit-animation-duration: 1s;
-			  -webkit-animation-timing-function: cubic-bezier;
-			  -webkit-animation-iteration-count: infinite;
-			}
+			-webkit-animation-name: drop;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-timing-function: cubic-bezier;
+			-webkit-animation-iteration-count: infinite;
 		}
 	}
 }
