@@ -192,14 +192,16 @@ html {
             .ui.fluid.buttons,
             .ui.load.button {
               position: relative;
-              top: 80vh;
+              top: 81.5vh;
               left: 0;
+              margin: 0 auto;
             }
 
             p {
-              position: absolute;
+              position: relative;
+              left: 0;
+              top: 85vh;
               width: 100%;
-              bottom: 2em;
               color: @io-white;
               font-size: @font-size-small;
               text-shadow: 1px 1px 1px @dark;
@@ -211,6 +213,24 @@ html {
                 &:focus {
                   color: @io-white;
                 }
+              }
+            }
+
+            @media (min-width: @phone-width) {
+              .ui.load.button {
+                width: 50%;
+              }
+            }
+
+            @media (min-width: @tablet-width) {
+              .ui.load.button {
+                width: 40%;
+              }
+            }
+
+            @media (min-width: @medium-desktop-width) {
+              .ui.load.button {
+                width: 30%;
               }
             }
           }
