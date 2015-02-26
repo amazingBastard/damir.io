@@ -1,11 +1,11 @@
 <template name="newPost">
   <div class="ui markdown form segment {{toggleEditor}} new-post">
     <div class="two fields">
-      <section class="animated {{animateFade}} editor field">
+      <section class="animated {{animateEditor}} editor field">
         <textarea name="write" class="write markdown" placeholder="Write your post with markdown" required></textarea>
       </section>
 
-      <section class="animated preview field">
+      <section class="animated {{animatePreview}} preview field">
         <div class="parse markdown">
           {{#markdown}}{{session 'post'}}{{/markdown}}
         </div>

@@ -5,11 +5,11 @@
 				{{#if currentUser}}
 					<div class="ui markdown form segment {{toggleEditor}}">
 						<div class="two fields">
-							<section class="animated {{animateFade}} editor field">
+							<section class="animated {{animateEditor}} editor field">
 								<textarea name="write" class="write markdown" required>{{post}}</textarea>
 							</section>
 
-							<section class="animated preview field">
+							<section class="animated {{animatePreview}} preview field">
 								<div class="parse markdown">
 									{{#markdown}}{{session 'post'}}{{/markdown}}
 								</div>

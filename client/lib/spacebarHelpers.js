@@ -62,8 +62,12 @@ Template.registerHelper('toggleEditor', function() {
   return Session.get('toggleEditor') ? 'active-editor' : 'active-preview';
 });
 
-Template.registerHelper('animateFade', function() {
+Template.registerHelper('animateEditor', function() {
   return Session.get('toggleEditor') ? 'fadeIn' : 'fadeOut';
+});
+
+Template.registerHelper('animatePreview', function() {
+  return !Session.get('toggleEditor') ? 'fadeIn' : 'fadeOut';
 });
 
 Template.registerHelper('toggleButton', function() {
