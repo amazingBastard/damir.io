@@ -21,11 +21,12 @@ Template['newPost'].events({
 	},
 	'click .add-new-post': function(e) {
 		e.preventDefault();
+		var now = Date.now();
 
 		var newPost = {
 			post: $('.new-post .editor .write.markdown').val(),
-			date: Date.now(),
-			updated: Date.now(),
+			date: now,
+			updated: now,
 			author: Meteor.userId(),
 			postCall: function() {
 				return this.post;
