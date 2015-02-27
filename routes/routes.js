@@ -7,11 +7,11 @@ Router.route('/dashboard', {
 
 Router.route('/dashboard/:_id', {
   name: 'editPost',
+  waitOn: function () {
+    return Meteor.subscribe('post', this.params._id);
+  },
   data: function() {
     return Posts.findOne(this.params._id);
-  },
-  waitOn: function () {
-    return Meteor.subscribe('posts');
   },
   action: function () {
     if (this.ready())
@@ -30,13 +30,13 @@ Router.route('/about', {
   SEO.set({ title: Meteor.App.NAME });
 });
 
-Router.route('/:_id', {
+Router.route('/posts/:_id', {
   name: 'showPost',
+  waitOn: function () {
+    Meteor.subscribe('post', this.params._id)
+  },
   data: function() {
     return Posts.findOne(this.params._id);
-  },
-  waitOn: function () {
-    return Meteor.subscribe('posts');
   },
   action: function () {
     if (this.ready())
@@ -48,19 +48,8 @@ Router.route('/:_id', {
   SEO.set({ title: Meteor.App.NAME });
 });
 
-Router.route('/', {
-  name: 'home',
-  waitOn: function () {
-    return [
-      Meteor.subscribe('posts')
-    ]
-  },
-  action: function () {
-    if (this.ready())
-      this.render('home');
-    else
-      this.render('loading');
-  }
+Router.route('/:postsLimit?', {
+  name: 'home'
 }, function () {
   SEO.set({ title: Meteor.App.NAME });
 });

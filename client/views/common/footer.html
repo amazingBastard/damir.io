@@ -20,7 +20,13 @@
           {{/if}}
         </div>
       {{else}}
-        <div class="ui primary load fluid button">Load more posts</div>
+        {{#if nextPath}}
+          <a class="ui primary load fluid button" href="{{nextPath}}">Load more posts</a>
+        {{else}}
+          {{#unless ready}}
+            {{> loading}}
+          {{/unless}}
+        {{/if}}
       {{/if}}
       <p class="aligned center">&copy; 2015, <a href="http://damirvazgird.com" target="_blank">Damir Vazgird</a></p>
     </div>
