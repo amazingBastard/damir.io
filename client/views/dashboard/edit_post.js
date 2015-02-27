@@ -25,10 +25,12 @@ Template['editPost'].events({
 	'click .update-post': function(e) {
 		e.preventDefault();
 
+		var now = Date.now();
+
     var thisPostId = this._id,
 		    postEntry = {
           post: $('.editor .markdown').val(),
-          updated: moment(new Date())
+          updated: now
         };
 
     Posts.update(thisPostId, {$set: postEntry}, function(err) {
