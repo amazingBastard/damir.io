@@ -10,10 +10,6 @@ binary-heap@1.0.2
 blaze@2.0.4
 blaze-tools@1.0.2
 boilerplate-generator@1.0.2
-browser-policy@1.0.3
-browser-policy-common@1.0.2
-browser-policy-content@1.0.3
-browser-policy-framing@1.0.3
 callback-hook@1.0.2
 check@1.0.4
 chuangbo:cookie@1.1.0
@@ -64,6 +60,7 @@ natestrauser:animate-css@3.1.2
 nooitaf:semantic-ui-less@0.19.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
+obvio171:disqus@1.0.0
 ordered-dict@1.0.2
 raix:handlebar-helpers@0.2.4
 random@1.0.2

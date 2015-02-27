@@ -17,7 +17,6 @@ audit-argument-checks
 fastclick
 zimme:iron-router-active
 manuelschoebel:ms-seo
-browser-policy
 useraccounts:semantic-ui
 natestrauser:animate-css
 dburles:collection-helpers
@@ -26,3 +25,4 @@ meteorhacks:fast-render
 markdown
 momentjs:moment
 mrt:flash-messages
+obvio171:disqus
