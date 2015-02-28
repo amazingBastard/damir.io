@@ -112,6 +112,8 @@ Other security enforcing packages like [audit-argument-checks](https://docs.mete
   * natestrauser:animate-css
   * nooitaf:semantic-ui-less
   * markdown
+  * obvio171:disqus
+  * joshowens:shareit
 * Security
   * browser-policy
   * audit-argument-checks

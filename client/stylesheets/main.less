@@ -4,6 +4,10 @@
 
 // main styles
 
+*, :after, :before {
+  box-sizing: inherit;
+}
+
 html {
   height: 100%;
   font-family: @font-family-base;
@@ -12,6 +16,8 @@ html {
     height: 100%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+
+
 
     // typography
 
@@ -41,13 +47,111 @@ html {
       color: @io-white;
       background: @europa-blue;
 
+      *,
       &:hover,
       &:focus {
         background: fade(@europa-blue, 85%);
       }
     }
 
+    // fluid buttons
+
+    .share-buttons {
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      margin: 0 0 1em;
+
+      .large.btn {
+        display: block;
+        width: 33.333%;
+        float: left;
+        margin: 0;
+        padding: 1em;
+        cursor: pointer;
+        min-height: 1em;
+        outline: 0;
+        border: none;
+        border-radius: 0;
+        vertical-align: baseline;
+        text-transform: none;
+        text-shadow: none;
+        font-size: @font-size-small;
+        font-weight: normal;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(39,41,43,.15) inset;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+        transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+        -webkit-tap-highlight-color: transparent;
+
+        &:first-child {
+          border-top-left-radius: 0.325em;
+          border-bottom-left-radius: 0.325em;
+        }
+
+        &:last-child {
+          border-top-right-radius: 0.325em;
+          border-bottom-right-radius: 0.325em;
+        }
+
+        i.fa {
+          display: block;
+          margin: 0em auto 0.25em;
+          opacity: 1;
+          height: 1em;
+          color: @io-white;
+          font-size: @font-size-large;
+          font-family: Icons;
+          font-style: normal;
+          line-height: 1;
+          font-weight: normal;
+          text-align: center;
+          speak: none;
+          font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transition: color 0.6s ease, transform 0.2s ease;
+          -moz-transition: color 0.6s ease, transform 0.2s ease;
+          -o-transition: color 0.6s ease, transform 0.2s ease;
+          -ms-transition: color 0.6s ease, transform 0.2s ease;
+          transition: color 0.6s ease, transform 0.2s ease;
+
+          &.fa-facebook:before {
+            content: "\f09a";
+          }
+
+          &.fa-twitter:before {
+            content: "\f099";
+          }
+
+          &.fa-google-plus:before {
+            content: "\f0d5";
+          }
+        }
+      }
+    }
+
     @media (min-width: @tablet-width) {
+
+      .share-buttons {
+
+        .large.btn {
+          font-size: @font-size-base;
+
+          i.fa {
+            display: inline-block;
+            margin: 0 0.25em 0 0;
+            font-size: @font-size-medium;
+          }
+        }
+      }
 
       .ui.fluid.buttons {
         width: 50%;
