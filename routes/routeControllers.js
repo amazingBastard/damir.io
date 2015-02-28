@@ -5,7 +5,7 @@ HomeController = RouteController.extend({
     return parseInt(this.params.postsLimit) || this.increment;
   },
   findOptions: function() {
-    return {sort: {submitted: -1}, limit: this.postsLimit()};
+    return {sort: {updated: -1}, limit: this.postsLimit()};
   },
   subscriptions: function() {
     this.postsSub = Meteor.subscribe('posts', this.findOptions());
