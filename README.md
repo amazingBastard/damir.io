@@ -8,6 +8,7 @@ Demo here: [damir.meteor.com](http://damir.meteor.com).
 
 * [Roadmap](#roadmap)
   * [Views](#views)
+  * [Features](#features)
   * [Refactoring](#refactoring)
 * [How to use](#how-to-use)
   * [Requirements](#requirements)
@@ -27,6 +28,11 @@ Demo here: [damir.meteor.com](http://damir.meteor.com).
 ### Views
 
 * About view needs to be created
+
+### Features
+
+* Add functionality to anchor links in posts.
+* Style horizontal rulers/dividers
 
 ### Refactoring
 
