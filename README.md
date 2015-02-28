@@ -2,8 +2,13 @@
 
 A software development blog by Damir Vazgird
 
+Demo here: [damir.meteor.com](http://damir.meteor.com).
+
 <!-- toc -->
 
+* [Roadmap](#roadmap)
+  * [Views](#views)
+  * [Refactoring](#refactoring)
 * [How to use](#how-to-use)
   * [Requirements](#requirements)
   * [Installation](#installation)
@@ -17,11 +22,20 @@ A software development blog by Damir Vazgird
 
 <!-- toc stop -->
 
-Demo here: [damir.meteor.com](http://damir.meteor.com).
+## Roadmap
+
+### Views
+
+* About view needs to be created
+
+### Refactoring
+
+* Replace post and edit helpers with Collection method.
+* Templatize the markdown form.
 
 ## How to use
 
-###Requirements
+### Requirements
 
 Make sure [Meteor is installed and up to date](https://www.meteor.com/install) or run:
 
@@ -29,7 +43,7 @@ Make sure [Meteor is installed and up to date](https://www.meteor.com/install) o
 curl https://install.meteor.com/ | sh
 ```
 
-###Installation
+### Installation
 
 ```
 git clone git@github.com:amazingBastard/damir.io.git
