@@ -32,8 +32,8 @@ curl https://install.meteor.com/ | sh
 ###Installation
 
 ```
-git clone git@github.com:amazingBastard/scifi.pub.git
-cd mtr-scifi.pub
+git clone git@github.com:amazingBastard/damir.io.git
+cd damir.io
 meteor
 ```
 
