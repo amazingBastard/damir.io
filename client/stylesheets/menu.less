@@ -132,6 +132,8 @@
 
 			.ui.icon.menu {
 				background: transparent;
+				-webkit-box-shadow: none;
+				box-shadow: none;
 
 				.item {
 					color: @light;
@@ -197,6 +199,13 @@
 		.footer {
 			opacity: 0;
 			background: none;
+			-webkit-transition: opacity 0s;
+			transition: opacity 0s;
+		}
+
+		.copyright {
+			display: none;
+			opacity: 0;
 			-webkit-transition: opacity 0s;
 			transition: opacity 0s;
 		}

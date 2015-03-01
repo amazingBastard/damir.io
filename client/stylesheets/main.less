@@ -390,15 +390,19 @@ html {
       }
 
       .copyright {
+        display: block;
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
         margin: 0.5em 0;
+        opacity: 1;
         z-index: 1;
         color: @io-white;
         font-size: @font-size-small;
         text-shadow: 1px 1px 1px @dark;
+        -webkit-transition: opacity 0s;
+  			transition: opacity 0s;
 
         a {
           color: @europa-blue;
