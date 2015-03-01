@@ -17,9 +17,39 @@ html {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 
-
-
     // typography
+
+    h1, h2, h3,
+    h4, h5, h6 {
+      margin: 0.75em 0;
+      color: @font-color;
+      font-weight: bold;
+      line-height: @line-height-base;
+    }
+
+    h1 {
+      border-bottom: 1px solid @cloud-gray;
+      font-size: @font-size-title;
+      text-align: center;
+      text-transform: uppercase;
+
+      small {
+        color: @comet-gray;
+        text-transform: none;
+      }
+    }
+
+    h2 {
+      font-size: @font-size-large;
+    }
+
+    h3 {
+      font-size: @font-size-medium;
+    }
+
+    h4 {
+      font-size: @font-size-base;
+    }
 
     a {
       color: @link-color;
@@ -29,6 +59,48 @@ html {
       &:focus {
         color: @font-color;
       }
+    }
+
+    p {
+      font-size: @font-size-base;
+      font-weight: 300;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    em {
+      font-weight: 400;
+    }
+
+    ul,
+    ol {
+      padding-left: 2em;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 0.3125em;
+    }
+
+    code {
+      display: block;
+      width: auto;
+      padding: 1em;
+      overflow-y: auto;
+      background: @font-color;
+      border-radius: 0.3125em;
+      color: @europa-blue;
+      line-height: 1.25;
+      -webkit-box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset;
+      box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset;
+    }
+
+    blockquote {
+      margin: 1em 0;
+      padding-left: 0.5em;
+      border-left: 3px solid @cloud-gray;
     }
 
     // buttons
