@@ -1,6 +1,7 @@
 Template.editPost.rendered = function () {
 	Session.set('toggleCover', true);
 	Session.set('showFooter', false);
+	Session.set('showActions', false);
 	Session.set('toggleEditor', true);
   Session.set('showEditor', true);
 

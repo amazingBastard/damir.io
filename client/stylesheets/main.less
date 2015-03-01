@@ -119,7 +119,6 @@ html {
       color: @io-white;
       background: @europa-blue;
 
-      *,
       &:hover,
       &:focus {
         background: fade(@europa-blue, 85%);
@@ -368,25 +367,6 @@ html {
               margin: 0 auto;
             }
 
-            p {
-              position: relative;
-              left: 0;
-              top: 85vh;
-              width: 100%;
-              color: @io-white;
-              font-size: @font-size-small;
-              text-shadow: 1px 1px 1px @dark;
-
-              a {
-                color: @europa-blue;
-
-                &:hover,
-                &:focus {
-                  color: @io-white;
-                }
-              }
-            }
-
             @media (min-width: @phone-width) {
               .ui.load.button {
                 width: 50%;
@@ -408,10 +388,31 @@ html {
         }
       }
 
+      .copyright {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0.5em 0;
+        z-index: 1;
+        color: @io-white;
+        font-size: @font-size-small;
+        text-shadow: 1px 1px 1px @dark;
+
+        a {
+          color: @europa-blue;
+
+          &:hover,
+          &:focus {
+            color: @io-white;
+          }
+        }
+      }
+
       &.cover {
 
         .yield {
-          height: 100vh;
+          height: 100%;
           margin: 0;
         }
 
